@@ -1,22 +1,10 @@
-from typing import Counter
 from inventory_report.reports.simple_report import SimpleReport
 
 
 class CompleteReport(SimpleReport):
     def generate(list_products):
-        heir_simple_report = SimpleReport.generate(list_products)
-
-        company_list = [row["nome_da_empresa"] for row in list_products]
-
-        company_counter = Counter(company_list)
-        # print(products_counter)
-        # print(products_counter.items())
-
-        products_message = "Produtos estocados por empresa: \n"
-        for product, count in company_counter.items():
-            products_message += f"- {product}: {count}\n"
-
-        return f"{heir_simple_report}\n{products_message}"
+        simple_report = SimpleReport.generate(list_products)
+        print(simple_report)
 
 
 test = [
