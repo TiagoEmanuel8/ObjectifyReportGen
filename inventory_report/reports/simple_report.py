@@ -6,6 +6,8 @@ class SimpleReport:
         today = datetime.now().strftime("%Y-%m-%d")
         oldest_fabrication = []
         newest_validity = []
+        # referencia da lógica: 
+        # https://github.com/tryber/sd-011-inventory-report/pull/100/files
         products_by_company = dict()
         for item in list_products:
             oldest_fabrication.append(item["data_de_fabricacao"])
