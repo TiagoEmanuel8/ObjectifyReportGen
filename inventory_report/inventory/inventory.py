@@ -4,6 +4,7 @@ from inventory_report.reports.complete_report import CompleteReport
 import csv
 import json
 
+
 class Inventory:
     def import_data(file_path, type_report):
         list_report = []
