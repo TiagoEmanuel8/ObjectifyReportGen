@@ -5,6 +5,7 @@ import csv
 import json
 import xml.etree.ElementTree as ET
 
+
 class Inventory:
     def import_data(file_path, type_report):
         list_report = []
@@ -18,8 +19,9 @@ class Inventory:
                 content = file.read()
                 list_report = json.loads(content)
         if file_path.endswith('xml'):
-            #referencia de código:
-            #https://github.com/tryber/sd-011-inventory-report/pull/100/files#diff-38906d25b4c36219f93f3eef13fb393577eda7c68fdce22fb74e7902712b0920
+            # referencia de código:
+            # https://github.com/tryber/sd-011-inventory-report/pull/100/files#diff
+            # -38906d25b4c36219f93f3eef13fb393577eda7c68fdce22fb74e7902712b0920
             with open(file_path) as file:
                 xml_tree = ET.parse(file)
                 root = xml_tree.getroot()
